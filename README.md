@@ -34,7 +34,7 @@ func main() {
 }
 ```
 
-Example using [Goji](github.com/zenazn/goji)
+Example using [Goji](http://github.com/zenazn/goji)
 
 ```go
 package main
