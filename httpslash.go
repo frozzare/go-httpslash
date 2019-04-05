@@ -2,6 +2,7 @@ package httpslash
 
 import (
 	"net/http"
+	"path"
 	"strings"
 )
 
