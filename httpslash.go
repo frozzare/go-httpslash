@@ -10,7 +10,7 @@ import (
 func TrailingSlash(h http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		len := len(r.URL.Path)
-		if string(r.URL.Path[len-1]) != "/" {
+		if string(r.URL.Path[len-1]) != "/" && path.Ext(r.URL.Path) == "" {
 			url := strings.Replace(r.URL.String(), r.URL.Path, r.URL.Path+"/", -1)
 			http.Redirect(w, r, url, 302)
 			return
